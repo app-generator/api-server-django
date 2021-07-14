@@ -17,12 +17,7 @@ class RegisterViewSet(viewsets.ModelViewSet):
 
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
-        token = ActiveSession.for_user(user)
-        res = {
-            "token": str(token),
-        }
 
         return Response({
-            "user": serializer.data,
-            "token": res["token"]
+            serializer.data
         }, status=status.HTTP_201_CREATED)
