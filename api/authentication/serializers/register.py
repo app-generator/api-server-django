@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 from django.core.exceptions import ObjectDoesNotExist
-from core.user.models import User
+from api.user.models import User
 
 
 class RegisterSerializer(serializers.ModelSerializer):

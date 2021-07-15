@@ -6,7 +6,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 from rest_framework import authentication, exceptions
 
-from core.user.models import User
+from api.user.models import User
 
 
 class JWTAuthentication(authentication.BaseAuthentication):

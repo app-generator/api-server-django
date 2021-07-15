@@ -2,7 +2,7 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 
-from core.authentication.serializers import RegisterSerializer
+from api.authentication.serializers import RegisterSerializer
 
 
 class RegisterViewSet(viewsets.ModelViewSet):
