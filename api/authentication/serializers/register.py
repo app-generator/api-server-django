@@ -5,7 +5,7 @@ from api.user.models import User
 
 
 class RegisterSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(max_length=128, min_length=8, write_only=True)
+    password = serializers.CharField(min_length=4, max_length=128, write_only=True)
     username = serializers.CharField(max_length=255, required=True)
     email = serializers.EmailField(required=True)
 
