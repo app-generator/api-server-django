@@ -7,7 +7,6 @@ from api.authentication.serializers import LoginSerializer
 
 
 class LoginViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
-    http_method_names = ['post']
     permission_classes = (AllowAny,)
     serializer_class = LoginSerializer
 

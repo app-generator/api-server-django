@@ -31,7 +31,7 @@ class ActiveSessionAuthentication(authentication.BaseAuthentication):
 
         return self._authenticate_credentials(request, token)
 
-    def _authenticate_credentials(self, request, token):
+    def _authenticate_credentials(self, token):
         print(token)
         try:
             active_session = ActiveSession.objects.get(token=token)
