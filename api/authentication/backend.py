@@ -9,7 +9,7 @@ from rest_framework import authentication, exceptions
 from api.user.models import User
 
 
-class JWTAuthentication(authentication.BaseAuthentication):
+class ActiveSessionAuthentication(authentication.BaseAuthentication):
     authentication_header_prefix = 'Bearer'
 
     def authenticate(self, request):
