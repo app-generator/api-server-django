@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.permissions import AllowAny, IsAuthenticated
 
 
-class AuthenticationViewSet(viewsets.ModelViewSet):
+class ActiveSessionViewSet(viewsets.ModelViewSet):
     http_method_names = ['post']
 
     def create(self, request, *args, **kwargs):
