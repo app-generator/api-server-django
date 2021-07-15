@@ -1,10 +1,8 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, status
 from rest_framework.response import Response
-from rest_framework import status
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import AllowAny
 
 from core.authentication.serializers import RegisterSerializer
-from core.authentication.models import ActiveSession
 
 
 class RegisterViewSet(viewsets.ModelViewSet):
@@ -18,6 +16,12 @@ class RegisterViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
 
-        return Response({
-            serializer.data
-        }, status=status.HTTP_201_CREATED)
+        print(user.id)
+
+        return Response(
+            {
+                "success": True,
+                "userID": user.id,
+                "msg": "The user was successfully registered"
+            }
+        , status=status.HTTP_201_CREATED)
