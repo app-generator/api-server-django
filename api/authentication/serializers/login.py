@@ -13,7 +13,7 @@ def _generate_jwt_token(user):
 
     token = jwt.encode({
         'id': user.pk,
-        'exp': int(dt.strftime('%s'))
+        'exp': int(dt.strftime('%S'))
     }, settings.SECRET_KEY, algorithm='HS256')
 
     return token
