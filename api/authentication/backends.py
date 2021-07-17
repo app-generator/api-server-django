@@ -29,10 +29,9 @@ class ActiveSessionAuthentication(authentication.BaseAuthentication):
         if prefix.lower() != auth_header_prefix:
             return None
 
-        return self._authenticate_credentials(request, token)
+        return self._authenticate_credentials(token)
 
     def _authenticate_credentials(self, token):
-        print(token)
         try:
             active_session = ActiveSession.objects.get(token=token)
         except:
