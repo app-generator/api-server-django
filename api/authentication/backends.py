@@ -1,4 +1,7 @@
+import jwt
+
 from rest_framework import authentication, exceptions
+from django.conf import settings
 
 from api.user.models import User
 from api.authentication.models import ActiveSession
@@ -6,6 +9,11 @@ from api.authentication.models import ActiveSession
 
 class ActiveSessionAuthentication(authentication.BaseAuthentication):
     authentication_header_prefix = "Bearer"
+
+    auth_error_message = {
+        "success": False,
+        "msg": "User is not logged on."
+    }
 
     def authenticate(self, request):
 
@@ -32,11 +40,16 @@ class ActiveSessionAuthentication(authentication.BaseAuthentication):
         return self._authenticate_credentials(token)
 
     def _authenticate_credentials(self, token):
+
+        try:
+            jwt.decode(token, settings.SECRET_KEY, algorithms=["HS256"])
+        except:
+            raise exceptions.AuthenticationFailed(self.auth_error_message)
+
         try:
             active_session = ActiveSession.objects.get(token=token)
         except:
-            msg = 'Invalid authentication. Could not find session.'
-            raise exceptions.AuthenticationFailed(msg)
+            raise exceptions.AuthenticationFailed(self.auth_error_message)
 
         try:
             user = active_session.user

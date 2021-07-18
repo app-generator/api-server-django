@@ -1,7 +1,7 @@
 import jwt
 from rest_framework import serializers
 from django.contrib.auth import authenticate
-from django.utils.timezone import datetime, timedelta
+from datetime import datetime, timedelta
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -9,12 +9,13 @@ from api.authentication.models import ActiveSession
 
 
 def _generate_jwt_token(user):
-    dt = datetime.now() + timedelta(days=7)
 
     token = jwt.encode({
         'id': user.pk,
-        'exp': int(dt.strftime('%S'))
-    }, settings.SECRET_KEY, algorithm='HS256')
+        'exp': datetime.utcnow() + timedelta(days=7)
+    }, settings.SECRET_KEY)
+
+    print(settings.SECRET_KEY)
 
     return token
 
