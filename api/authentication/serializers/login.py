@@ -55,7 +55,10 @@ class LoginSerializer(serializers.Serializer):
             )
             if not session.token:
                 raise ValueError
-        except (ObjectDoesNotExist, ValueError):
+
+            jwt.decode(session.token, settings.SECRET_KEY, algorithms=["HS256"])
+
+        except (ObjectDoesNotExist, ValueError, jwt.ExpiredSignatureError):
             session = ActiveSession.objects.create(
                 user=user,
                 token=_generate_jwt_token(user)
