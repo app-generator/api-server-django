@@ -8,7 +8,6 @@ from api.authentication.models import ActiveSession
 
 
 class ActiveSessionAuthentication(authentication.BaseAuthentication):
-    authentication_header_prefix = "Bearer"
 
     auth_error_message = {
         "success": False,
@@ -19,23 +18,12 @@ class ActiveSessionAuthentication(authentication.BaseAuthentication):
 
         request.user = None
 
-        auth_header = authentication.get_authorization_header(request).split()
-        auth_header_prefix = self.authentication_header_prefix.lower()
+        auth_header = authentication.get_authorization_header(request)
 
         if not auth_header:
             return None
 
-        if len(auth_header) == 1:
-            return None
-
-        elif len(auth_header) > 2:
-            return None
-
-        prefix = auth_header[0].decode('utf-8')
-        token = auth_header[1].decode('utf-8')
-
-        if prefix.lower() != auth_header_prefix:
-            return None
+        token = auth_header.decode('utf-8')
 
         return self._authenticate_credentials(token)
 
