@@ -42,11 +42,17 @@ class ActiveSessionAuthentication(authentication.BaseAuthentication):
         try:
             user = active_session.user
         except User.DoesNotExist:
-            msg = 'No user matching this token was found.'
+            msg = {
+                "success": False,
+                "msg": 'No user matching this token was found.'
+            }
             raise exceptions.AuthenticationFailed(msg)
 
         if not user.is_active:
-            msg = 'This user has been deactivated.'
+            msg = {
+                "success": False,
+                "msg": 'This user has been deactivated.'
+            }
             raise exceptions.AuthenticationFailed(msg)
 
         return (user, token)

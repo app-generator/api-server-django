@@ -16,8 +16,6 @@ class RegisterViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
 
-        print(user.id)
-
         return Response(
             {
                 "success": True,

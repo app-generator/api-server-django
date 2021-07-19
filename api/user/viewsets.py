@@ -11,6 +11,11 @@ class UserViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.Updat
     serializer_class = UserSerializer
     permission_classes = (IsAuthenticated,)
 
+    error_message = {
+                "success": False,
+                "msg": "Error updating user"
+            }
+
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', True)
         instance = User.objects.get(id=request.data.get('userID'))
@@ -27,14 +32,10 @@ class UserViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.Updat
         user_id = request.data.get('userID')
 
         if not user_id:
-            raise ValidationError({"user": "Precise an ID."})
+            raise ValidationError(self.error_message)
 
         if self.request.user.pk != user_id and not self.request.user.is_superuser:
-
-            raise ValidationError({
-                "success": False,
-                "msg": "Error updating user"
-            })
+            raise ValidationError(self.error_message)
         self.update(request)
 
         return Response({

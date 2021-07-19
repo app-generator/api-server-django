@@ -30,11 +30,17 @@ class LoginSerializer(serializers.Serializer):
 
         if email is None:
             raise serializers.ValidationError(
-                'An email address is required to log in.'
+                {
+                    "success": False,
+                    "msg": "Email is required to login"
+                }
             )
         if password is None:
             raise serializers.ValidationError(
-                'A password is required to log in.'
+                {
+                    "success": False,
+                    "msg": "Password is required to log in."
+                }
             )
         user = authenticate(username=email, password=password)
 
@@ -48,7 +54,10 @@ class LoginSerializer(serializers.Serializer):
 
         if not user.is_active:
             raise serializers.ValidationError(
-                'This user has been deactivated.'
+                {
+                    "success": False,
+                    "msg": "User is not active"
+                }
             )
 
         try:
