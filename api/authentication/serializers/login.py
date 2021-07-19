@@ -9,7 +9,6 @@ from api.authentication.models import ActiveSession
 
 
 def _generate_jwt_token(user):
-
     token = jwt.encode({
         'id': user.pk,
         'exp': datetime.utcnow() + timedelta(days=7)
@@ -41,7 +40,10 @@ class LoginSerializer(serializers.Serializer):
 
         if user is None:
             raise serializers.ValidationError(
-                'A user with this email and password was not found.'
+                {
+                    "success": False,
+                    "msg": "Wrong credentials"
+                }
             )
 
         if not user.is_active:
