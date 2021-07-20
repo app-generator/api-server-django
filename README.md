@@ -10,8 +10,7 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 - Simple, intuitive codebase - built for beginners (can be extended with ease) 
 - Django / Django REST / Sqlite3 - a simple, easy to use backend
 - Authentication with JWT (JWT login, JWT logout)
-- Testing
-- Docker Support 
+- Testing, Docker
 - [API Interface Descriptor](https://github.com/app-generator/api-server-nodejs/blob/master/media/api.postman_collection.json): POSTMAN Collection
 - Docker 
 - Full-stack Samples that uses this backend 
@@ -32,6 +31,7 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 <br />
 
 ## Requirements
+
 - Django==3.2.5
 - djangorestframework==3.12.4
 - PyJWT==2.1.0
