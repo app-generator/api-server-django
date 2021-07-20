@@ -4,7 +4,7 @@ from api.user.viewsets import UserViewSet
 
 router = routers.SimpleRouter(trailing_slash=False)
 
-router.register(r'edit', UserViewSet, basename='users')
+router.register(r'edit', UserViewSet, basename='user-edit')
 
 router.register(r'register', RegisterViewSet, basename='register')
 

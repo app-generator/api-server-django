@@ -34,8 +34,9 @@ class UserViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin, mixins.Updat
         if not user_id:
             raise ValidationError(self.error_message)
 
-        if self.request.user.pk != user_id and not self.request.user.is_superuser:
+        if self.request.user.pk != int(user_id) and not self.request.user.is_superuser:
             raise ValidationError(self.error_message)
+        
         self.update(request)
 
         return Response({
