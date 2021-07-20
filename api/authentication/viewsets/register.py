@@ -6,7 +6,7 @@ from api.authentication.serializers import RegisterSerializer
 
 
 class RegisterViewSet(viewsets.ModelViewSet):
-    http_method_names = ['post']
+    http_method_names = ["post"]
     permission_classes = (AllowAny,)
     serializer_class = RegisterSerializer
 
@@ -20,6 +20,7 @@ class RegisterViewSet(viewsets.ModelViewSet):
             {
                 "success": True,
                 "userID": user.id,
-                "msg": "The user was successfully registered"
-            }
-        , status=status.HTTP_201_CREATED)
+                "msg": "The user was successfully registered",
+            },
+            status=status.HTTP_201_CREATED,
+        )

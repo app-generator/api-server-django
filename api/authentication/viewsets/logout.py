@@ -15,7 +15,6 @@ class LogoutViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
         session = ActiveSession.objects.get(user=user)
         session.delete()
 
-        return Response({
-            "success": True,
-            "msg": "Token revoked"
-        }, status=status.HTTP_200_OK)
+        return Response(
+            {"success": True, "msg": "Token revoked"}, status=status.HTTP_200_OK
+        )

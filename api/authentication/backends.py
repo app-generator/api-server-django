@@ -9,10 +9,7 @@ from api.authentication.models import ActiveSession
 
 class ActiveSessionAuthentication(authentication.BaseAuthentication):
 
-    auth_error_message = {
-        "success": False,
-        "msg": "User is not logged on."
-    }
+    auth_error_message = {"success": False, "msg": "User is not logged on."}
 
     def authenticate(self, request):
 
@@ -23,7 +20,7 @@ class ActiveSessionAuthentication(authentication.BaseAuthentication):
         if not auth_header:
             return None
 
-        token = auth_header.decode('utf-8')
+        token = auth_header.decode("utf-8")
 
         return self._authenticate_credentials(token)
 
@@ -42,17 +39,11 @@ class ActiveSessionAuthentication(authentication.BaseAuthentication):
         try:
             user = active_session.user
         except User.DoesNotExist:
-            msg = {
-                "success": False,
-                "msg": 'No user matching this token was found.'
-            }
+            msg = {"success": False, "msg": "No user matching this token was found."}
             raise exceptions.AuthenticationFailed(msg)
 
         if not user.is_active:
-            msg = {
-                "success": False,
-                "msg": 'This user has been deactivated.'
-            }
+            msg = {"success": False, "msg": "This user has been deactivated."}
             raise exceptions.AuthenticationFailed(msg)
 
         return (user, token)

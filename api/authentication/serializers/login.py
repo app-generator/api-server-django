@@ -9,10 +9,10 @@ from api.authentication.models import ActiveSession
 
 
 def _generate_jwt_token(user):
-    token = jwt.encode({
-        'id': user.pk,
-        'exp': datetime.utcnow() + timedelta(days=7)
-    }, settings.SECRET_KEY)
+    token = jwt.encode(
+        {"id": user.pk, "exp": datetime.utcnow() + timedelta(days=7)},
+        settings.SECRET_KEY,
+    )
 
     return token
 
@@ -23,45 +23,31 @@ class LoginSerializer(serializers.Serializer):
     password = serializers.CharField(max_length=128, write_only=True)
 
     def validate(self, data):
-        email = data.get('email', None)
-        password = data.get('password', None)
+        email = data.get("email", None)
+        password = data.get("password", None)
 
         if email is None:
             raise serializers.ValidationError(
-                {
-                    "success": False,
-                    "msg": "Email is required to login"
-                }
+                {"success": False, "msg": "Email is required to login"}
             )
         if password is None:
             raise serializers.ValidationError(
-                {
-                    "success": False,
-                    "msg": "Password is required to log in."
-                }
+                {"success": False, "msg": "Password is required to log in."}
             )
         user = authenticate(username=email, password=password)
 
         if user is None:
             raise serializers.ValidationError(
-                {
-                    "success": False,
-                    "msg": "Wrong credentials"
-                }
+                {"success": False, "msg": "Wrong credentials"}
             )
 
         if not user.is_active:
             raise serializers.ValidationError(
-                {
-                    "success": False,
-                    "msg": "User is not active"
-                }
+                {"success": False, "msg": "User is not active"}
             )
 
         try:
-            session = ActiveSession.objects.get(
-                user=user
-            )
+            session = ActiveSession.objects.get(user=user)
             if not session.token:
                 raise ValueError
 
@@ -69,16 +55,11 @@ class LoginSerializer(serializers.Serializer):
 
         except (ObjectDoesNotExist, ValueError, jwt.ExpiredSignatureError):
             session = ActiveSession.objects.create(
-                user=user,
-                token=_generate_jwt_token(user)
+                user=user, token=_generate_jwt_token(user)
             )
 
         return {
             "success": True,
             "token": session.token,
-            "user": {
-                "_id": user.pk,
-                "username": user.username,
-                "email": user.email
-            }
+            "user": {"_id": user.pk, "username": user.username, "email": user.email},
         }

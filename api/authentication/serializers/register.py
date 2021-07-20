@@ -20,8 +20,4 @@ class RegisterSerializer(serializers.ModelSerializer):
         except ObjectDoesNotExist:
             return User.objects.create_user(**validated_data)
 
-        raise ValidationError({
-            "success": False,
-            "msg": "Email already taken"
-            }
-        )
+        raise ValidationError({"success": False, "msg": "Email already taken"})

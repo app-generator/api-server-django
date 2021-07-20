@@ -13,7 +13,7 @@ class CoreTestRunner(DiscoverRunner):
 
     def setup_databases(self, **kwargs):
         """We set the database"""
-        kwargs['aliases'] = connections
+        kwargs["aliases"] = connections
         r = super().setup_databases(**kwargs)
         self.load_fixtures()
         return r
@@ -21,7 +21,7 @@ class CoreTestRunner(DiscoverRunner):
     @classmethod
     def load_fixtures(cls):
         try:
-            module = import_module(f'api.fixtures')
-            getattr(module, 'run_fixtures')()
+            module = import_module(f"api.fixtures")
+            getattr(module, "run_fixtures")()
         except ImportError:
             return
