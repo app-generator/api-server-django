@@ -26,7 +26,7 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 <br />
 
-![Django API Server - Open-source Django Starter provided by AppSeed.]()
+![Django API Server - Open-source Django Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/126252341-6961a681-767b-4aca-a95f-140da5af5f81.png) 
 
 <br />
 
@@ -139,3 +139,6 @@ authorization: JWT_TOKEN (returned by Login request)
 ```
 
 <br />
+
+---
+Django API Server - provided by AppSeed [App Generator](https://appseed.us)
