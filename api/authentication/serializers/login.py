@@ -1,5 +1,5 @@
 import jwt
-from rest_framework import serializers
+from rest_framework import serializers, exceptions
 from django.contrib.auth import authenticate
 from datetime import datetime, timedelta
 from django.conf import settings
@@ -27,22 +27,20 @@ class LoginSerializer(serializers.Serializer):
         password = data.get("password", None)
 
         if email is None:
-            raise serializers.ValidationError(
+            raise exceptions.ValidationError(
                 {"success": False, "msg": "Email is required to login"}
             )
         if password is None:
-            raise serializers.ValidationError(
+            raise exceptions.ValidationError(
                 {"success": False, "msg": "Password is required to log in."}
             )
         user = authenticate(username=email, password=password)
 
         if user is None:
-            raise serializers.ValidationError(
-                {"success": False, "msg": "Wrong credentials"}
-            )
+            raise exceptions.AuthenticationFailed({"success": False, "msg": "Wrong credentials"})
 
         if not user.is_active:
-            raise serializers.ValidationError(
+            raise exceptions.ValidationError(
                 {"success": False, "msg": "User is not active"}
             )
 
