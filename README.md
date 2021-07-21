@@ -17,8 +17,9 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 > Can be used with other UI projects for a complete **fullstack** experience  
 
-- [React Datta Dashboard](https://github.com/app-generator/react-datta-able-dashboard) - open-source sample
 - [React Berry Dashboard](https://github.com/app-generator/react-berry-admin-template) - open-source sample
+- [React Datta Dashboard](https://github.com/app-generator/react-datta-able-dashboard) - open-source sample
+- [React Datta Dashboard PRO](https://appseed.us/product/react-node-js-datta-able-pro) - commercial fullstack product
 
 <br />
 
