@@ -12,7 +12,6 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 - Authentication with JWT (JWT login, JWT logout)
 - Testing, Docker
 - [API Interface Descriptor](https://github.com/app-generator/api-server-nodejs/blob/master/media/api.postman_collection.json): POSTMAN Collection
-- Docker 
 - Full-stack Samples that uses this backend 
      - [React Node JS Datta](https://appseed.us/product/react-node-js-datta-able) - open-source full-stack sample
      - [React Node JS Berry](https://appseed.us/product/react-node-js-berry-dashboard) - open-source full-stack sample
