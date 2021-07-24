@@ -7,6 +7,7 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 > Features:
 
+- [API Definition](https://docs.appseed.us/boilerplate-code/api-unified-definition) - the unified API structure implemented by this server
 - Simple, intuitive codebase - built for beginners (can be extended with ease) 
 - Django / Django REST / Sqlite3 - a simple, easy to use backend
 - Authentication with JWT (JWT login, JWT logout)
