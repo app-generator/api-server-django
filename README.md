@@ -7,16 +7,11 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 > Features:
 
+- [API Definition](https://docs.appseed.us/boilerplate-code/api-unified-definition) - the unified API structure implemented by this server
 - Simple, intuitive codebase - built for beginners (can be extended with ease) 
 - Django / Django REST / Sqlite3 - a simple, easy to use backend
 - Authentication with JWT (JWT login, JWT logout)
-- Testing
-- Docker Support 
-- [API Interface Descriptor](https://github.com/app-generator/api-server-nodejs/blob/master/media/api.postman_collection.json): POSTMAN Collection
-- Docker 
-- Full-stack Samples that uses this backend 
-     - [React Node JS Datta](https://appseed.us/product/react-node-js-datta-able) - open-source full-stack sample
-     - [React Node JS Berry](https://appseed.us/product/react-node-js-berry-dashboard) - open-source full-stack sample
+- Unitary tests, Docker
 
 <br />
 
@@ -94,9 +89,15 @@ Visit `http://localhost:5000` in your browser. The API server will be running.
 
 <br />
 
-## API
+## Tests
 
-For a fast set up, use this POSTMAN file: [api_sample](https://github.com/app-generator/api-server-Django/blob/master/media/api.postman_collection.json)
+```bash 
+$ python manage.py test
+```
+
+## API 
+
+For a fast set up, use this POSTMAN file: [api_sample](https://github.com/app-generator/api-server-unified/blob/main/api.postman_collection.json)
 
 > **Register** - `api/users/signup`
 
