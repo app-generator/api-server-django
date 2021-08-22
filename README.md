@@ -75,7 +75,6 @@ $ python manage.py runserver
 
 The API server will start using the default port `8000`.
 
-
 <br />
 
 ### [Docker](https://www.docker.com/) execution
@@ -103,6 +102,8 @@ Visit `http://localhost:5000` in your browser. The API server will be running.
 ```bash 
 $ python manage.py test
 ```
+
+<br />
 
 ## API
 
