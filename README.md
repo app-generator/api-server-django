@@ -1,18 +1,18 @@
 
 # Django API Server
 
-Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authentication flow is based on [json web tokens](https://jwt.io).
+Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authentication flow is built with [json web tokens](https://jwt.io).
 
 <br />
 
 > Features:
 
 - [API Definition](https://docs.appseed.us/boilerplate-code/api-unified-definition) - the unified API structure implemented by this server
-- Simple, intuitive codebase - built for beginners (can be extended with ease) 
-- Django / Django REST / Sqlite3 - a simple, easy to use backend
-- Authentication with JWT (JWT login, JWT logout)
-- Testing, Docker
-- [API Interface Descriptor](https://github.com/app-generator/api-server-nodejs/blob/master/media/api.postman_collection.json): POSTMAN Collection
+- Simple, intuitive codebase - can be extended with ease 
+- Django / Django REST / SQLite3 - a simple, easy to use backend
+- Authentication with JWT (login, logout, register)
+- PRO version available - **[Django API Server PRO](https://github.com/app-generator/api-server-django-pro)**
+  - Support for Mongo DB, Docker, Unitary tests, and priority support 
 
 <br />
 
@@ -91,13 +91,18 @@ $ cd api-server-django
 > Start the app in Docker
 
 ```bash
-$ docker-compose up -d --build
+$ docker-compose up --build -d
 ```
 
 Visit `http://localhost:5000` in your browser. The API server will be running.
 
-
 <br />
+
+## Tests
+
+```bash 
+$ python manage.py test
+```
 
 ## API
 
