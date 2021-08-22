@@ -11,7 +11,16 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 - Simple, intuitive codebase - built for beginners (can be extended with ease) 
 - Django / Django REST / Sqlite3 - a simple, easy to use backend
 - Authentication with JWT (JWT login, JWT logout)
-- Unitary tests, Docker
+- Testing, Docker
+- [API Interface Descriptor](https://github.com/app-generator/api-server-nodejs/blob/master/media/api.postman_collection.json): POSTMAN Collection
+
+<br />
+
+> Can be used with other UI projects for a complete **fullstack** experience  
+
+- [React Berry Dashboard](https://github.com/app-generator/react-berry-admin-template) - open-source sample
+- [React Datta Dashboard](https://github.com/app-generator/react-datta-able-dashboard) - open-source sample
+- [React Datta Dashboard PRO](https://appseed.us/product/react-node-js-datta-able-pro) - commercial fullstack product
 
 <br />
 
@@ -27,6 +36,7 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 <br />
 
 ## Requirements
+
 - Django==3.2.5
 - djangorestframework==3.12.4
 - PyJWT==2.1.0
@@ -89,15 +99,9 @@ Visit `http://localhost:5000` in your browser. The API server will be running.
 
 <br />
 
-## Tests
+## API
 
-```bash 
-$ python manage.py test
-```
-
-## API 
-
-For a fast set up, use this POSTMAN file: [api_sample](https://github.com/app-generator/api-server-unified/blob/main/api.postman_collection.json)
+For a fast set up, use this POSTMAN file: [api_sample](https://github.com/app-generator/api-server-Django/blob/master/media/api.postman_collection.json)
 
 > **Register** - `api/users/signup`
 
