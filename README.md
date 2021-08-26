@@ -11,8 +11,6 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 - Simple, intuitive codebase - can be extended with ease 
 - Django / DRF / SQLite3 - a simple, easy to use backend
 - Authentication with JWT (login, logout, register)
-- PRO version available - **[Django API Server PRO](https://github.com/app-generator/api-server-django-pro)**
-  - Support for Mongo DB, Docker, Unitary tests, and priority support 
 
 <br />
 
