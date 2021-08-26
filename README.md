@@ -11,6 +11,7 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 - Simple, intuitive codebase - can be extended with ease 
 - Django / DRF / SQLite3 - a simple, easy to use backend
 - Authentication with JWT (login, logout, register)
+- Docker, Unitary tests
 
 <br />
 
@@ -39,27 +40,27 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 ## How to use the code
 
-**Clone the sources**
+**Step #1** -  Clone the sources
 
 ```bash
 $ git clone https://github.com/app-generator/api-server-django.git
 $ cd api-server-django
 ```
 
-**Create a virtual environment**
+**Step #2** - Create a virtual environment
 
 ```bash
 $ virtualenv -p python3 venv
 $ source venv/bin/activate
 ```
 
-**Install dependencies** using pip
+**Step #3** - Install dependencies using PIP
 
 ```bash
 $ pip install -r requirements.txt
 ```
 
-**Start the API server** 
+**Step #4** - Start the API server
 
 ```bash
 $ python manage.py migrate
