@@ -147,4 +147,4 @@ authorization: JWT_TOKEN (returned by Login request)
 <br />
 
 ---
-Django API Server - provided by AppSeed [App Generator](https://appseed.us)
+**Django API Server** - provided by AppSeed [App Generator](https://appseed.us)
