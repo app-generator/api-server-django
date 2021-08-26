@@ -9,25 +9,20 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 - [API Definition](https://docs.appseed.us/boilerplate-code/api-unified-definition) - the unified API structure implemented by this server
 - Simple, intuitive codebase - can be extended with ease 
-- Django / Django REST / SQLite3 - a simple, easy to use backend
+- Django / DRF / SQLite3 - a simple, easy to use backend
 - Authentication with JWT (login, logout, register)
 - PRO version available - **[Django API Server PRO](https://github.com/app-generator/api-server-django-pro)**
   - Support for Mongo DB, Docker, Unitary tests, and priority support 
 
 <br />
 
-> Can be used with other UI projects for a complete **fullstack** experience  
+> **[PRO Version](https://github.com/app-generator/api-server-django-pro)** available: MongoDB persistance, Docker, Unitary Tests, 24/7 LIVE Support via [Discord](https://discord.gg/fZC6hup)
 
-- [React Berry Dashboard](https://github.com/app-generator/react-berry-admin-template) - open-source sample
-- [React Datta Dashboard](https://github.com/app-generator/react-datta-able-dashboard) - open-source sample
-- [React Datta Dashboard PRO](https://appseed.us/product/react-node-js-datta-able-pro) - commercial fullstack product
+> Can be used with other [React Starters](https://appseed.us/apps/react) for a complete **Full-Stack** experience:
 
-<br />
-
-> Support: 
-
-- Github (issues tracker), Email: **support @ appseed.us** 
-- **Discord**: [LIVE Support](https://discord.gg/fZC6hup) (registered AppSeed Users) 
+| [React Node JS Berry](https://appseed.us/product/react-node-js-berry-dashboard) | [Full-Stack Material PRO](https://appseed.us/full-stack/react-material-dashboard) | [React Node Datta Able](https://github.com/app-generator/react-datta-able) |
+| --- | --- | --- |
+| [![React Node JS Berry](https://user-images.githubusercontent.com/51070104/124934742-aa392300-e00d-11eb-83bf-28d8b8704ec8.png)](https://appseed.us/product/react-node-js-berry-dashboard) | [![Full-Stack Material PRO](https://user-images.githubusercontent.com/51070104/128878037-50da7a12-787d-455d-933a-30b2957e2896.png)](https://appseed.us/full-stack/react-material-dashboard) | [![React Node Datta Able](https://user-images.githubusercontent.com/51070104/125737710-834a9e6f-c39b-4f3b-a42a-9583ce2ce1da.png)](https://github.com/app-generator/react-datta-able)
 
 <br />
 
