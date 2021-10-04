@@ -50,8 +50,13 @@ $ cd api-server-django
 **Step #2** - Create a virtual environment
 
 ```bash
-$ virtualenv -p python3 venv
-$ source venv/bin/activate
+$ # Virtualenv modules installation (Unix based systems)
+$ virtualenv env
+$ source env/bin/activate
+$
+$ # Virtualenv modules installation (Windows based systems)
+$ # virtualenv env
+$ # .\env\Scripts\activate
 ```
 
 **Step #3** - Install dependencies using PIP
