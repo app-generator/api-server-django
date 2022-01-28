@@ -16,7 +16,7 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 <br />
 
-## Quick Start in `Docker`
+## ✨ Quick Start in `Docker`
 
 > Get the code
 
@@ -49,16 +49,17 @@ The API server will start using the PORT `5000`.
 
 <br />
 
-## How to use the code
+## ✨ How to use the code
 
-**Step #1** -  Clone the sources
+> **Step #1** -  Clone the sources
 
 ```bash
 $ git clone https://github.com/app-generator/api-server-django.git
 $ cd api-server-django
 ```
+<br />
 
-**Step #2** - Create a virtual environment
+> **Step #2** - Create a virtual environment
 
 ```bash
 $ # Virtualenv modules installation (Unix based systems)
@@ -70,13 +71,17 @@ $ # virtualenv env
 $ # .\env\Scripts\activate
 ```
 
-**Step #3** - Install dependencies using PIP
+<br />
+
+> **Step #3** - Install dependencies using PIP
 
 ```bash
 $ pip install -r requirements.txt
 ```
 
-**Step #4** - Start the API server
+<br />
+
+> **Step #4** - Start the API server
 
 ```bash
 $ python manage.py migrate
@@ -87,7 +92,7 @@ The API server will start using the default port `8000`.
 
 <br />
 
-## Tests
+## ✨ Tests
 
 ```bash 
 $ python manage.py test
@@ -95,7 +100,7 @@ $ python manage.py test
 
 <br />
 
-## API
+## ✨ API
 
 For a fast set up, use this POSTMAN file: [api_sample](https://github.com/app-generator/api-server-Django/blob/master/media/api.postman_collection.json)
 
