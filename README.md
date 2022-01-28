@@ -7,11 +7,31 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 > Features:
 
+- `Up-to-date dependencies` 
 - [API Definition](https://docs.appseed.us/boilerplate-code/api-unified-definition) - the unified API structure implemented by this server
 - Simple, intuitive codebase - can be extended with ease 
 - Django / DRF / SQLite3 - a simple, easy to use backend
 - Authentication with JWT (login, logout, register)
 - Docker, Unitary tests
+
+<br />
+
+## Quick Start in `Docker`
+
+> Get the code
+
+```bash
+$ git clone https://github.com/app-generator/api-server-django.git
+$ cd api-server-django
+```
+
+> Start the app in Docker
+
+```bash
+$ docker-compose up --build  
+```
+
+The API server will start using the PORT `5000`.
 
 <br />
 
@@ -26,15 +46,6 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 <br />
 
 ![Django API Server - Open-source Django Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/126252341-6961a681-767b-4aca-a95f-140da5af5f81.png) 
-
-<br />
-
-## Requirements
-
-- Django==3.2.5
-- djangorestframework==3.12.4
-- PyJWT==2.1.0
-- django-cors-headers==3.7.0 
 
 <br />
 
@@ -73,26 +84,6 @@ $ python manage.py runserver
 ```
 
 The API server will start using the default port `8000`.
-
-<br />
-
-### [Docker](https://www.docker.com/) execution
----
-
-> Get the code
-
-```bash
-$ git clone https://github.com/app-generator/api-server-django.git
-$ cd api-server-django
-```
-
-> Start the app in Docker
-
-```bash
-$ docker-compose up --build -d
-```
-
-Visit `http://localhost:5000` in your browser. The API server will be running.
 
 <br />
 

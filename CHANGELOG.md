@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.1] 2022-01-28
+### Improvements
+
+- Dependencies update (all packages) 
+  - `Django==4.0.1`
+
 ## [1.0.0] 2021-07-20
 ### First stable version
 
