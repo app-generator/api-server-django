@@ -44,6 +44,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(db_index=True, max_length=255)
     email = models.EmailField(db_index=True, unique=True)
     is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
 
     USERNAME_FIELD = "email"
