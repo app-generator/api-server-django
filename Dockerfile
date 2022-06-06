@@ -1,14 +1,18 @@
-FROM python:3.9.5-slim-buster
+FROM python:3.9
 
-WORKDIR /usr/src/app
-
+# set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update \
-  && apt-get -y install netcat gcc \
-  && apt-get clean
-
+COPY requirements.txt .
+# install python dependencies
 RUN pip install --upgrade pip
-COPY ./requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+# running migrations
+RUN python manage.py migrate
+
+# gunicorn
+CMD ["gunicorn", "--config", "gunicorn-cfg.py", "core.wsgi"]
