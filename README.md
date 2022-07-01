@@ -16,6 +16,18 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 <br />
 
+> Can be used with other [React Starters](https://appseed.us/apps/react) for a complete **Full-Stack** experience:
+
+| [React Node JS Berry](https://appseed.us/product/berry-dashboard/api-server-nodejs/react/) | [React Node Soft Dashboard](https://appseed.us/product/soft-ui-dashboard/api-server-nodejs/react/) | [React Node Horizon](https://appseed.us/product/horizon-ui/api-server-nodejs/) |
+| --- | --- | --- |
+| [![React Node JS Berry](https://user-images.githubusercontent.com/51070104/176936514-f1bccb21-bafe-4b43-9e4c-b6fe0ec9511d.png)](https://appseed.us/product/berry-dashboard/api-server-nodejs/react/) | [![React Node Soft Dashboard](https://user-images.githubusercontent.com/51070104/176936814-74386559-4e05-43d5-b9a4-8f70ce96a610.png)](https://appseed.us/product/soft-ui-dashboard/api-server-nodejs/react/) | [![React Node Horizon](https://user-images.githubusercontent.com/51070104/174428337-181e6dea-0ad9-4fe1-a35f-25e5fa656a9d.png)](https://appseed.us/product/horizon-ui/api-server-nodejs/)
+
+<br />
+
+![Nodejs API Server - Open-source Nodejs Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/124414813-142aa180-dd5c-11eb-9279-6b082dadc51a.png)
+
+<br />
+
 ## ✨ Quick Start in `Docker`
 
 > Get the code
@@ -32,20 +44,6 @@ $ docker-compose up --build
 ```
 
 The API server will start using the PORT `5000`.
-
-<br />
-
-> **[PRO Version](https://github.com/app-generator/api-server-django-pro)** available: MongoDB persistance, Docker, Unitary Tests, 24/7 LIVE Support via [Discord](https://discord.gg/fZC6hup)
-
-> Can be used with other [React Starters](https://appseed.us/apps/react) for a complete **Full-Stack** experience:
-
-| [React Node JS Berry](https://appseed.us/product/react-node-js-berry-dashboard) | [Full-Stack Material PRO](https://appseed.us/full-stack/react-material-dashboard) | [React Node Datta Able](https://github.com/app-generator/react-datta-able) |
-| --- | --- | --- |
-| [![React Node JS Berry](https://user-images.githubusercontent.com/51070104/124934742-aa392300-e00d-11eb-83bf-28d8b8704ec8.png)](https://appseed.us/product/react-node-js-berry-dashboard) | [![Full-Stack Material PRO](https://user-images.githubusercontent.com/51070104/128878037-50da7a12-787d-455d-933a-30b2957e2896.png)](https://appseed.us/full-stack/react-material-dashboard) | [![React Node Datta Able](https://user-images.githubusercontent.com/51070104/125737710-834a9e6f-c39b-4f3b-a42a-9583ce2ce1da.png)](https://github.com/app-generator/react-datta-able)
-
-<br />
-
-![Django API Server - Open-source Django Starter provided by AppSeed.](https://user-images.githubusercontent.com/51070104/126252341-6961a681-767b-4aca-a95f-140da5af5f81.png) 
 
 <br />
 
