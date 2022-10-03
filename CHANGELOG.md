@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.0.3] 2022-10-03
+### Improvements
+
+- Fix Docker Scripts
+
 ## [1.0.2] 2022-06-07
 ### Improvements
 
