@@ -79,7 +79,17 @@ $ pip install -r requirements.txt
 
 <br />
 
-> **Step #4** - Start the API server
+> **Step #4** - Create a new `.env` file using sample `env.sample`
+
+The meaning of each variable can be found below: 
+
+- `DEBUG`: if `True` the app runs in develoment mode
+  - For production value `False` should be used
+- `SECRET_KEY`: used in assets management
+
+<br />
+
+> **Step #5** - Start the API server
 
 ```bash
 $ python manage.py migrate
