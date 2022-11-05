@@ -13,6 +13,7 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 - Django / DRF / SQLite3 - a simple, easy to use backend
 - Authentication with JWT (login, logout, register)
 - Docker, Unitary tests
+- `Instant Deploy` on RENDER using [Python Deployer](https://github.com/app-generator/deploy-automation-render)
 
 <br />
 
