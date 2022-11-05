@@ -13,7 +13,7 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 - ✅ Authentication with JWT (login, logout, register)
 - ✅ Docker, Unitary tests
 - `Instant Deploy` on RENDER using [Python Deployer](https://github.com/app-generator/deploy-automation-render)
-  - `python.exe deployer.py django <REPO> <ENTRY_POINT>`
+  - `python.exe deployer.py django <THIS_REPO> <ENTRY_POINT>`
   
 <br />
 
