@@ -7,14 +7,14 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 > Features:
 
-- `Up-to-date dependencies` 
-- [API Definition](https://docs.appseed.us/boilerplate-code/api-unified-definition) - the unified API structure implemented by this server
-- Simple, intuitive codebase - can be extended with ease 
-- Django / DRF / SQLite3 - a simple, easy to use backend
-- Authentication with JWT (login, logout, register)
-- Docker, Unitary tests
+- ✅ `Up-to-date dependencies` 
+- ✅ [API Definition](https://docs.appseed.us/boilerplate-code/api-unified-definition) - the unified API structure implemented by this server
+- ✅ Django / DRF / SQLite3 - a simple, easy to use backend
+- ✅ Authentication with JWT (login, logout, register)
+- ✅ Docker, Unitary tests
 - `Instant Deploy` on RENDER using [Python Deployer](https://github.com/app-generator/deploy-automation-render)
-
+  - `python.exe deployer.py django <REPO> <ENTRY_POINT>`
+  
 <br />
 
 > Can be used with other [React Starters](https://appseed.us/apps/react) for a complete **Full-Stack** experience:
