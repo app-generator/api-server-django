@@ -1,5 +1,5 @@
 
-# Django API Server
+# [Django API Server](https://github.com/app-generator/api-server-django)
 
 Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authentication flow is built with [json web tokens](https://jwt.io).
 
@@ -157,4 +157,4 @@ authorization: JWT_TOKEN (returned by Login request)
 <br />
 
 ---
-**Django API Server** - provided by AppSeed [App Generator](https://appseed.us)
+**[Django API Server](https://github.com/app-generator/api-server-django)** - provided by [AppSeed](https://appseed.us)
