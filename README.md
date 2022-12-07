@@ -87,6 +87,8 @@ The meaning of each variable can be found below:
 - `DEBUG`: if `True` the app runs in develoment mode
   - For production value `False` should be used
 - `SECRET_KEY`: used in assets management
+- `GITHUB_CLIENT_ID`: For GitHub social login
+- `GITHUB_SECRET_KEY`: For GitHub social login
 
 <br />
 

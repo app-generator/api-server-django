@@ -21,6 +21,8 @@ env = environ.Env(
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -176,3 +178,7 @@ if CORS_ALLOWED_ORIGINS_ENV:
 
 TESTING = False
 TEST_RUNNER = "core.test_runner.CoreTestRunner"
+
+# GitHub social authentication
+GITHUB_CLIENT_ID = env('GITHUB_CLIENT_ID')
+GITHUB_SECRET_KEY = env('GITHUB_SECRET_KEY')
