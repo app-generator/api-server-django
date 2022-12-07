@@ -64,6 +64,3 @@ class LoginSerializer(serializers.Serializer):
         }
 
 
-class GithubSerializer(serializers.Serializer):
-    code = serializers.CharField(max_length=255)
-
