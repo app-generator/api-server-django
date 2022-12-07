@@ -8,6 +8,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from api.authentication.models import ActiveSession
 
 
+
 def _generate_jwt_token(user):
     token = jwt.encode(
         {"id": user.pk, "exp": datetime.utcnow() + timedelta(days=7)},
@@ -61,3 +62,8 @@ class LoginSerializer(serializers.Serializer):
             "token": session.token,
             "user": {"_id": user.pk, "username": user.username, "email": user.email},
         }
+
+
+class GithubSerializer(serializers.Serializer):
+    code = serializers.CharField(max_length=255)
+
