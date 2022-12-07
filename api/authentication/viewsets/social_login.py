@@ -1,27 +1,21 @@
 import requests
 import jwt
-
-from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 
-from api.authentication.serializers.login import GithubSerializer, _generate_jwt_token
+from api.authentication.serializers.login import _generate_jwt_token
 from api.user.models import User
 from api.authentication.models import ActiveSession
 
+from rest_framework.views import APIView
 
-class GithubSocialLogin(viewsets.ModelViewSet):
-    http_method_names = ["post"]
+class GithubSocialLogin(APIView):
     permission_classes = (AllowAny,)
-    serializer_class = GithubSerializer
 
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-
-        code = serializer.data['code']
+    def get(self, request):    
+        code = self.request.GET.get('code')
         client_id = getattr(settings, 'GITHUB_CLIENT_ID')
         client_secret = getattr(settings, 'GITHUB_SECRET_KEY')
         root_url = 'https://github.com/login/oauth/access_token'
