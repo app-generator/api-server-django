@@ -32,11 +32,14 @@ class GithubSocialLogin(APIView):
         user_data = requests.get('https://api.github.com/user', headers={
             "Authorization": "Bearer " + access_token
         }).json()
-
-        if User.objects.filter(username=user_data['login'], email=user_data['email']).exists():
-            user = User.objects.get(username=user_data['login'], email=user_data['email'])
+        
+        if User.objects.filter(username=user_data['login']).exists():
+            user = User.objects.get(username=user_data['login'])
         else:
-            user = User.objects.create_user(username=user_data['login'], email=user_data['email'])
+            try:
+                user = User.objects.create(username=user_data['login'], email=user_data['email'])
+            except:
+                user = User.objects.create(username=user_data['login'])
         
         try:
             session = ActiveSession.objects.get(user=user)
