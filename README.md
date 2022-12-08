@@ -32,14 +32,14 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 
 ## ✨ Quick Start in `Docker`
 
-> Get the code
+> 👉 Get the code
 
 ```bash
 $ git clone https://github.com/app-generator/api-server-django.git
 $ cd api-server-django
 ```
 
-> Start the app in Docker
+> 👉 Start the app in Docker
 
 ```bash
 $ docker-compose up --build  
@@ -51,7 +51,7 @@ The API server will start using the PORT `5000`.
 
 ## ✨ How to use the code
 
-> **Step #1** -  Clone the sources
+> 👉 **Step #1** -  Clone the sources
 
 ```bash
 $ git clone https://github.com/app-generator/api-server-django.git
@@ -59,7 +59,7 @@ $ cd api-server-django
 ```
 <br />
 
-> **Step #2** - Create a virtual environment
+> 👉 **Step #2** - Create a virtual environment
 
 ```bash
 $ # Virtualenv modules installation (Unix based systems)
@@ -73,7 +73,7 @@ $ # .\env\Scripts\activate
 
 <br />
 
-> **Step #3** - Install dependencies using PIP
+> 👉 **Step #3** - Install dependencies using PIP
 
 ```bash
 $ pip install -r requirements.txt
@@ -81,7 +81,7 @@ $ pip install -r requirements.txt
 
 <br />
 
-> **Step #4** - Create a new `.env` file using sample `env.sample`
+> 👉 **Step #4** - Create a new `.env` file using sample `env.sample`
 
 The meaning of each variable can be found below: 
 
@@ -93,7 +93,7 @@ The meaning of each variable can be found below:
 
 <br />
 
-> **Step #5** - Start the API server
+> 👉 **Step #5** - Start the API server
 
 ```bash
 $ python manage.py migrate
