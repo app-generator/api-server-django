@@ -694,7 +694,8 @@ class Profile(models.Model):
     menu_favorito = models.BooleanField(default=False)
     menu_setor = models.BooleanField(default=False)
     menu_projecao = models.BooleanField(default=False)
-    menu_ranking = models.BooleanField(default=True)
+    menu_ranking = models.BooleanField(default=False)
+    menu_robo = models.BooleanField(default=True)
     menu_esconder_inativos = models.BooleanField(default=False)
     TIPO_PROJECAO = (
         ('u', 'Últimas'),

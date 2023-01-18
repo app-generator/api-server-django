@@ -19,7 +19,10 @@ icone = {
     'subsetor': 3,
     'segmento': 3,
     'ranking': 4,
-    'favorito': 5
+    'favorito': 5,
+    'atualizar_acoes': 6,
+    'atualizar_indices': 6,
+    'analisar': 7,
 }
 
 def incluirAcoesMenu(a, prefixo_id, pf):
@@ -120,62 +123,6 @@ class MenuViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
                     else:
                         grupo['children'].append(item) 
                 if len(grupo['children']) > 0: menu.append(grupo) 
-            # resp = [
-            #             {
-            #                 'id': 'investimentos',
-            #                 'title': "Investimentos",
-            #                 'type': 'group',
-            #                 'children': [
-            #                     {
-            #                         'id': 'acoes',
-            #                         'title': 'Ações',
-            #                         'type': 'item',
-            #                         'url': '/dashboard/default',
-            #                         'icon': None,
-            #                         'breadcrumbs': True
-            #                     },
-            #                     {
-            #                         'id': 'empresas',
-            #                         'title': 'Empresas',
-            #                         'type': 'item',
-            #                         'url': '/dashboard/analytics',
-            #                         'icon': None,
-            #                         'breadcrumbs': True
-            #                     },
-            #                     {
-            #                         'id': 'setores',
-            #                         'title': 'Setores',
-            #                         'type': 'item',
-            #                         'url': '/dashboard/analytics',
-            #                         'icon': None,
-            #                         'breadcrumbs': True
-            #                     }
-            #                 ]
-            #             },
-            #             {
-            #                 'id': 'analises',
-            #                 'title': "Análises",
-            #                 'type': 'group',
-            #                 'children': [
-            #                     {
-            #                         'id': 'projecoes',
-            #                         'title': 'Projeções',
-            #                         'type': 'collapse',
-            #                         'icon': None,
-            #                         'breadcrumbs': True,
-            #                         'disabled': False
-            #                     },
-            #                     {
-            #                         'id': 'rankings',
-            #                         'title': 'Rankings',
-            #                         'type': 'item',
-            #                         'url': '/dashboard/analytics',
-            #                         'icon': None,
-            #                         'breadcrumbs': True
-            #                     },
-            #                 ]
-            #             }
-            # ]
             return Response(menu, status=status.HTTP_200_OK)
         except Exception as exceptionObj:
             return Response({}, status=status.HTTP_511_NETWORK_AUTHENTICATION_REQUIRED)
