@@ -37,6 +37,7 @@ investpy = "*"
 fuzzywuzzy = "*"
 python-levenshtein = "*"
 auto-sklearn = "*"
+django-phonenumber-field = {extras = ["phonenumberslite"], version = "*"}
 
 [dev-packages]
 

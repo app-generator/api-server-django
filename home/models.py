@@ -34,6 +34,7 @@ from joblib import dump, load
 from random import randint
 from fuzzywuzzy import fuzz
 # from sqlalchemy import create_engine, false, null, text, true
+# from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 
@@ -689,6 +690,17 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     projecaoacao = models.ForeignKey(ProjecaoAcao, on_delete=models.DO_NOTHING, default=1)
     plano = models.ForeignKey(Plano, on_delete=models.DO_NOTHING, default=1)
+    primeiro_nome = models.CharField(max_length=30, null=True)
+    ultimo_nome = models.CharField(max_length=30, null=True)
+    TIPO_PERFIL = (
+        ('a', 'Agressivo'),
+        ('m', 'Moderado'),
+        ('c', 'Conservador'),
+    )
+    perfil = models.CharField(max_length=1, choices=TIPO_PERFIL, default='m')     
+    telefone = models.CharField(max_length=20, null=True)
+    email = models.EmailField(max_length=254, null=True)
+    endereco = models.CharField(max_length=254, null=True)
     menu_acao = models.BooleanField(default=False)
     menu_empresa = models.BooleanField(default=False)
     menu_favorito = models.BooleanField(default=False)

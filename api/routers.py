@@ -4,6 +4,7 @@ from api.authentication.viewsets import (
     ActiveSessionViewSet,
     LogoutViewSet,
     MenuViewSet,
+    ObterDadosCadastroViewSet,
 )
 from rest_framework import routers
 from api.user.viewsets import UserViewSet
@@ -21,6 +22,8 @@ router.register(r"checkSession", ActiveSessionViewSet, basename="check-session")
 router.register(r"logout", LogoutViewSet, basename="logout")
 
 router.register(r"menu", MenuViewSet, basename="menu")
+
+router.register(r"obterDadosCadastro", ObterDadosCadastroViewSet, basename="obterdadoscadastro")
 
 
 urlpatterns = [

@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "api",
     "api.user",
     "api.authentication",
+    "phonenumber_field",
     "home",
 ]
 
