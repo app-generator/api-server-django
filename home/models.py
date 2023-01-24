@@ -34,7 +34,6 @@ from joblib import dump, load
 from random import randint
 from fuzzywuzzy import fuzz
 # from sqlalchemy import create_engine, false, null, text, true
-# from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 
@@ -698,7 +697,7 @@ class Profile(models.Model):
         ('c', 'Conservador'),
     )
     perfil = models.CharField(max_length=1, choices=TIPO_PERFIL, default='m')     
-    telefone = models.CharField(max_length=20, null=True)
+    celular = models.CharField(max_length=20, null=True)
     email = models.EmailField(max_length=254, null=True)
     endereco = models.CharField(max_length=254, null=True)
     menu_acao = models.BooleanField(default=False)

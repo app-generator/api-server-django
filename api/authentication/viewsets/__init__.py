@@ -3,5 +3,5 @@ from .login import LoginViewSet
 from .active_session import ActiveSessionViewSet
 from .logout import LogoutViewSet
 from .menu import MenuViewSet
-from .obter_dados_cadastro import ObterDadosCadastroViewSet
+from .dados_cadastro import ObterDadosCadastroViewSet, GravarDadosCadastroViewSet
 
