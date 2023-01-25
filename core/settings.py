@@ -103,7 +103,7 @@ DATABASES = {
         'NAME': 'botnhold',
         'USER': 'acesso-bot',
         'PASSWORD': 'Inve$timento',
-        'HOST': '172.28.96.1',
+        'HOST': '172.31.0.1',
         'PORT': '5433',
     }
 }
