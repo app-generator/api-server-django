@@ -13,7 +13,7 @@ class RegisterViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
 
-        serializer.is_valid(raise_exception=True)
+        r = serializer.is_valid(raise_exception=True)
         user = serializer.save()
 
         return Response(

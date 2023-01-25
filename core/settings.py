@@ -20,6 +20,7 @@ env = environ.Env(
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
@@ -38,6 +39,10 @@ try:
 except:
     DEBUG = False
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+# CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS", default="*").split(" ")
 
 # Application definition
@@ -54,6 +59,8 @@ INSTALLED_APPS = [
     "api",
     "api.user",
     "api.authentication",
+    "phonenumber_field",
+    "home",
 ]
 
 MIDDLEWARE = [
@@ -91,13 +98,13 @@ WSGI_APPLICATION = "core.wsgi.application"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE"  : env("DB_ENGINE"  , default="django.db.backends.sqlite3"),
-        "NAME"    : env("DB_DATABASE", default=os.path.join(BASE_DIR, "db.sqlite3")),
-        "USER"    : env("DB_USER"    , default=None),
-        "PASSWORD": env("DB_PASSWORD", default=None),
-        "HOST"    : env("DB_HOST"    , default=None),
-        "PORT"    : env("DB_PORT"    , default=None),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'botnhold',
+        'USER': 'acesso-bot',
+        'PASSWORD': 'Inve$timento',
+        'HOST': '172.31.0.1',
+        'PORT': '5433',
     }
 }
 
@@ -122,9 +129,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = 'pt-BR'
 
-TIME_ZONE = "UTC"
+TIME_ZONE = 'America/Bahia'
 
 USE_I18N = True
 
@@ -132,10 +139,25 @@ USE_L10N = True
 
 USE_TZ = True
 
+USE_THOUSAND_SEPARATOR = True
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+# STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
 
-STATIC_URL = "/static/"
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(CORE_DIR, 'static'),
+)
+# STATIC_ROOT=os.path.join(BASE_DIR, "/static/")
+# STATIC_URL="/static/"
+
+# STATICFILES_DIRS = (
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'admin/static/'),
+# )
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -180,5 +202,6 @@ TESTING = False
 TEST_RUNNER = "core.test_runner.CoreTestRunner"
 
 # GitHub social authentication
-GITHUB_CLIENT_ID = env('GITHUB_CLIENT_ID')
-GITHUB_SECRET_KEY = env('GITHUB_SECRET_KEY')
+
+GITHUB_CLIENT_ID = '34bf8ef678ec3fe63578'
+GITHUB_SECRET_KEY = '04c8a62e5a8995cdd20afc94d1c8dc846539d5e8'
