@@ -16,8 +16,6 @@ Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authe
 - 🆕 `OAuth` for **Github**
   - Full-stack ready with [React Soft Dashboard](https://github.com/app-generator/react-soft-ui-dashboard)
 - ✅ Docker, Unitary tests
-- 🚀 `Instant Deploy` on RENDER using [Python Deployer](https://github.com/app-generator/deploy-automation-render)
-  - `python.exe deployer.py django <THIS_REPO>`
   
 <br />
 
