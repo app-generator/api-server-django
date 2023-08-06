@@ -3,13 +3,7 @@
 
 Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authentication flow is built with [json web tokens](https://jwt.io).
 
-<br />
-
-## 🚀 `PROMO` [Spring Boost Campaign](https://appseed.us/discounts/) `50%OFF`
-
-> The **discount is applicable to all products and licenses** (no stock limits) until `15.MAR`
-
-[![Spring Boost Campaign](https://user-images.githubusercontent.com/51070104/221118889-171c5afc-4d01-402b-8681-61b37338e26c.png)](https://appseed.us/discounts/)
+- 👉 [Support](https://appseed.us/support/) via **Discord & Email** provided by `AppSeed`. 
 
 <br />
 
