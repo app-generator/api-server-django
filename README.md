@@ -3,11 +3,11 @@
 
 Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authentication flow is built with [json web tokens](https://jwt.io).
 
-- 👉 [Support](https://appseed.us/support/) via **Discord & Email** provided by `AppSeed`. 
+> 👉 [Support](https://appseed.us/support/) via **Discord & Email** provided by `AppSeed`. 
 
 <br />
 
-> Features:
+## Features:
 
 - ✅ `Up-to-date dependencies` 
 - ✅ [API Definition](https://docs.appseed.us/boilerplate-code/api-unified-definition) - the unified API structure implemented by this server
