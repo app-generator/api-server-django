@@ -1,9 +1,10 @@
 
-# [Django API Server](https://github.com/app-generator/api-server-django)
+# [Django API Server](https://appseed.us/boilerplate-code/django-boilerplate/)
 
 Simple starter built with Python / Django Rest / Sqlite3 and JWT Auth. The authentication flow is built with [json web tokens](https://jwt.io).
 
-> 👉 [Support](https://appseed.us/support/) via **Discord & Email** provided by `AppSeed`. 
+- 👉 [Support](https://appseed.us/support/) via **Discord & Email**
+- 🚀 [Custom Development Services](https://appseed.us/custom-development/) for `StartUPs`, `Small Businesses`, and `Solo-developers`
 
 <br />
 
