@@ -1,0 +1,32 @@
+name: JS - Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Execute remote SSH commands
+        uses: appleboy/ssh-action@master
+        timeout-minutes: 120
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          port: ${{ secrets.PORT }}
+          timeout: 120m
+          command_timeout: 120m
+          script: |
+            cd ~/api-server-nestjs
+            git fetch origin main
+            if [ $(git rev-parse HEAD) != $(git rev-parse @{u}) ]; then
+              git pull origin main
+              export DOCKER_BUILDKIT=1
+              docker compose up -d --build --no-deps --pull always && docker system prune -af
+            else
+              echo "No changes detected, skipping deployment."
+            fi
